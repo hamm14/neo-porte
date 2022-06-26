@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neo-Porte</title>
+  <link rel="stylesheet" href="https://github.com/necolas/normalize.css/blob/master/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+  <!--header-->
+  <header>
+    <div class="flex">
+      <div class="logo">
+        <a href="index.html"><img src="img/neo-logo.png" alt="logo"></a>
+      </div>
+
+        <!--nav menu-->
+     <nav class="flex g_nav_wrap">
+       <ul class="flex g_nav">
+         <li><a href="#news">NEWS</a></li>
+         <li><a href="#missionvalue">MISSION VALUE</a></li>
+         <li><a href="#entry">ENTRY</a></li>
+         <li><a href="#operation">OPERATION</a></li>
+         <li><a href="./vtuber.html">Vtuber</a></li>
+         <li><a href="#contact">CONTACT</a></li>
+         <li><a href="https://twitter.com/NeoPorte_info">
+          <img src="img/sns.png" alt="twitter">
+        </a></li>
+       </ul>
+     </nav>
+
+     <div class="g_nav_toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+    </div>
+  </header>
+
+<body>
+  <div id="vtuber">
+    <div class="vtuber wrapper">
+      <h1>Vtuber</h1>
+      <h2>所属Vtuber</h2>
+  
+      <div class="flex wrapper">
+        <a href="aruse-inu.html">
+          <img src="img/aruse.png" alt="或世イヌ">
+          <h3 class="purple-border">或世イヌ / Aruse Inu</h3>
+       </a>
+  
+       <a href="hizuki-yui.html">
+        <img src="img/yui.png" alt="緋月ゆい">
+        <h3 class="purple-border">緋月 ゆい / Hizuki Yui</h3>
+       </a>
+      </div>
+  
+  
+      <div class="flex wrapper">
+        <a href="nayuta.html">
+          <img src="img/nayuta.png" alt="凪夢夛 ">
+          <h3 class="purple-border">凪夢夛 / Nayuta</h3>
+       </a>
+  
+       <a href="yozuna-niu.html">
+        <img src="img/niu.png" alt="夜絆ニウ">
+        <h3 class="purple-border">夜絆ニウ / Yozuna Niu</h3>
+       </a>
+      </div>
+  
+  
+  
+      <div class="flex wrapper">
+        <a href="minase.html">
+          <img src="img/minase.png" alt="或世イヌ">
+          <h3 class="purple-border">水無瀬 / Minase</h3>
+       </a>
+  
+       <a href="tente-forte.html">
+        <img src="img/forte.png" alt="天帝フォルテ">
+        <h3 class="purple-border">天帝フォルテ / Tentei Forte</h3>
+       </a>
+      </div>
+  
+  
+      <div class="flex wrapper">
+        <a href="shibuya-haru.html">
+          <img src="img/shibuhalu.png" alt="渋谷ハル">
+          <h3 class="purple-border">渋谷ハル / Shibuya HAL</h3>
+       </a>
+  
+       <a href="Shirayuki-Reid.html">
+        <img src="img/reid.png" alt="白雪レイド">
+        <h3 class="purple-border">白雪レイド / Shirayuki Reid</h3>
+       </a>
+      </div>
+    </div>
+  </div>
+  
+
+    <!--footer-->
+    <footer>
+      <div class="wrapper">
+        <img src="img/neo.png" alt="neo-porte">
+
+        <p>&copy; 2022 Neo-Porte.</p>
+      </div>
+    </footer>
+
+  </main>
+
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   
+  <!--  スライド を使う場合  -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script>
+      $(document).ready(function(){
+          $('.slide').slick({
+              dots: true,
+              autoplay: true,
+              autoplaySpeed: 1000,
+              infinite: true
+          });
+      });
+  </script>
+  
+  <!--  その他js  -->
+<script>
+  //gナビ
+  $(window).on('load',function() {
+    $('body').removeClass('nav_op');
+  });
+
+  var state = false;
+  var scrollpos;
+  $('.g_nav_toggle').on('click', function(){
+    //    $('body').toggleClass('nav_op');
+    $(this).toggleClass('open');
+    if(state == false) {
+      scrollpos = $(window).scrollTop();
+      $('body').addClass('nav_op').css({'top': -scrollpos});
+      state = true;
+    } else {
+      $('body').removeClass('nav_op').css({'top': 0});
+      window.scrollTo( 0 , scrollpos );
+      state = false;
+    }
+
+  });
+  $('.g_nav a[href*="#"]').on('click', function () {
+    if ($('body').hasClass('nav_op')) {
+      $('.g_nav_toggle').trigger('click');
+    }
+  });
+</script>
+
+<script>
+  //* smooth scroller
+  jQuery(function(){
+    // smooth scroller
+    $('a[href*="#"]').on('click', function() {
+      var hash = this.hash;
+      if(!hash || hash == '#'){
+        return false;
+      }
+      var offset = $(hash).offset();
+      if(!offset){
+        return true;
+      }
+
+      //メニュー除く
+      var menu_height = 0;
+      //        if ($('.job_menu.fixed').length){
+      //            var menu_height = $('.job_menu.fixed').outerHeight();
+      //        }
+
+      $('body,html').animate({scrollTop: (offset.top - menu_height)}, 800, 'swing');
+      return false;
+    });
+
+  });
+</script>
+</body>
+</html>

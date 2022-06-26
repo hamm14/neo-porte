@@ -1,0 +1,535 @@
+@charset "utf-8";
+img {
+  width: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 1.3rem;
+  color: white;
+  font-family: 'Noto Serif JP', serif;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+h1, h2{
+  font-family: 'Fredoka One', cursive;
+}
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 55px;
+}
+h2 {
+  font-size: 1.8rem;
+  letter-spacing: -1.5px;
+}
+.flex {
+  display: flex;
+}
+.wrapper {
+  max-width: 770px;
+  margin: 0 auto;
+}
+body.nav_op {
+  /*　この部分　スマホ　ハンバーガーメニューに必要　*/
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+}
+.g_nav li a:hover {
+  color: white;
+}
+.g_nav_toggle {
+  display: none;
+}
+
+
+/*header*/
+header {
+  padding: 5px;
+  background: rgba(199, 199, 199, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.flex a {
+  color: black;
+}
+.logo {
+  width: 10%;
+  margin: 10px 0 0 10px;
+}
+nav {
+  margin: 15px 0 0 500px;
+}
+header li {
+  margin-right: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+header li:last-child {
+  width: 2%;
+  margin: 0 20px 0 auto;
+}
+
+/*mainvisual*/
+.mainvisual {
+  background: black;
+  text-align: center;
+}
+.mainvisual img {
+  padding: 30% 20%;
+  width: 45%;
+}
+
+/*news*/
+#news {
+  background: url(../img/news.png) bottom / cover fixed;
+  opacity: 0.8;
+  padding: 6% 0 10% 0;
+}
+.article h2 {
+  font-size: 1.8rem;
+  letter-spacing: -1.5px;
+  margin: 30px 0 0 30px;
+}
+.article p {
+  font-weight: bold;
+  margin: -15px 0 0 70px;
+  background: rgb(31, 31, 31);
+  border-radius: 10px;
+  padding: 25px 0 15px 20px;
+}
+
+
+/*mission value*/
+#missionvalue {
+  background: url(../img/mission.png) bottom / cover fixed;
+  padding: 6% 0 10% 0;
+  font-weight: bold;
+}
+#missionvalue .wrapper h2,
+#entry h2 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 2rem;
+}
+#missionvalue .wrapper > h2::before {
+  content: "――";
+  letter-spacing: -10px;
+  margin-right: 20px;
+}
+#missionvalue .wrapper > h2 {
+  font-size: 2.7rem;
+  margin-bottom: 80px;
+}
+.paragraph2 {
+  margin: 60px 0 100px 0;
+}
+.paragraph2 > p{
+  margin-top: 25px;
+}
+.paragraph1 {
+  margin-top: 40px;
+}
+.b_border {
+  margin-bottom: 70px;
+  border-bottom: 1px solid white;
+  padding-bottom: 100px;
+}
+span {
+  font-size: 1.8rem;
+}
+.thema {
+  margin-top: 60px;
+}
+.thema > h2 {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.thema > h2::before {
+  z-index: -1;
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: rgba(255, 255, 255,0.5);
+  display: inline-block;
+  position: absolute;
+  bottom: 0.2em;
+}
+.thema > p {
+  margin-top: 30px;
+  font-size: 1.35rem;
+}
+
+
+/*entry*/
+#entry {
+  color: black;
+  background: rgb(228, 228, 228);
+  padding: 6% 0 10% 0;
+  font-weight: bold;
+}
+#entry .wrapper > h2 {
+  margin-top: 60px;
+}
+.entry li {
+  font-size: 1.3rem;
+}
+.purple-border {
+  position: relative;
+  padding-bottom: 10px;
+}
+.purple-border::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-image: repeating-linear-gradient(45deg, #773091 0px, #773091 1px, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%);
+  background-size: 8px 8px;
+}
+.entry {
+  margin-top: 30px;
+}
+.entry ul {
+  margin: 30px 0 20px 0;
+}
+.entry > p {
+  font-size: 1rem;
+}
+.caution li {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+.caution a {
+  text-decoration: underline;
+}
+.caution li, .entry li {
+  list-style: disc;
+  margin-left: 20px;
+}
+.smoll {
+  font-size: 1rem;
+}
+.step h3 {
+  color: rgb(158, 104, 158);
+  font-size: 2.5rem;
+}
+.step h3::before {
+  content: "";
+  flex: 0 0 var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+  background-color: #702d8885;
+}
+.step p {
+  color: rgb(99, 99, 99);
+  margin: 10px 0;
+}
+
+.answer {
+  text-align: center;
+  background: rgb(250, 85, 85);
+  opacity: 0.9;
+  margin-top: 100px;
+  padding: 3%;
+}
+.answer h2 {
+  color: white;
+  border-bottom: 1px solid white;
+  padding-bottom: 15px;
+}
+.answer p {
+  color: rgb(250, 85, 85);
+  background: white;
+  border-radius: 15px;
+  display: inline-block;
+  margin-top: 20px;
+  padding: 3% 30%;
+  font-weight: bold;
+}
+
+
+/*operation*/
+#operation {
+  background: url(../img/ope.png) bottom / cover fixed;
+  padding: 6% 0 5% 0;
+  font-weight: bold;
+}
+#operation h1 {
+  margin-bottom: 10px;
+}
+#operation h2 {
+  font-size: 1.4rem;
+  font-family: 'Noto Serif JP', serif;
+  display: inline-block;
+}
+.operation {
+  width: 50%;
+  margin: 60px 30px 30px 30px;
+}
+.operation img {
+  width: 50%;
+  margin-right: 100%;
+}
+.operation > h2 {
+  margin: 10px 0;
+}
+.operation p {
+  font-size: 0.9rem;
+}
+
+/*contact*/
+#contact {
+  background: black;
+  padding: 6% 0 8% 0;
+  font-weight: bold;
+  text-align: center;
+}
+#contact p:last-child {
+  font-size: 1rem;
+}
+
+
+/*footer*/
+footer {
+  background: url(../img/footer.png) bottom / cover;
+  padding: 6% 0 5% 0;
+  text-align: center;
+}
+footer img {
+  width: 30%;
+}
+footer p {
+  font-size: 0.8rem;
+  margin-top: 50px;
+}
+
+/*media*/
+@media screen and (max-width: 670px){
+  body {
+    font-size: 0.9rem;
+  }
+  .wrapper {
+    padding: 5%;
+  }
+  h1 {
+    font-size: 2.3rem;
+  }
+  nav {
+    margin: 0;
+  }
+  .logo {
+    width: 25%;
+  }
+  .article h2 {
+    font-size: 1rem;
+    font-weight: normal;
+  }
+  .article h2, .article p {
+    margin-left: 0;
+  }
+  .article p {
+    padding: 20px 10px 10px 10px;
+  }
+  #missionvalue .wrapper > h2 {
+    font-size: 1.5rem;
+  }
+  .paragraph2 {
+    margin: 30px 0;
+  }
+  span {
+    font-size: 1.2rem;
+  }
+  #missionvalue .wrapper h2, #entry h2 {
+    font-size: 1.1rem;
+  }
+  .thema p {
+    margin-top: 10px;
+    font-size: 0.8rem;
+  }
+  #entry .wrapper > h2 {
+    margin-top: 40px;
+  }
+  .entry li {
+    font-size: 0.8rem;
+    margin: 0;
+  }
+  .entry > p {
+    font-size: 0.7rem;
+  }
+  .smoll {
+    font-size: 0.7rem;
+    margin-left: 10px;
+  }
+  .step h3 {
+    font-size: 1.5rem;
+  }
+  .caution li {
+    font-size: 0.72rem;
+    margin-top: 2px;
+  }
+  .caution li, .entry li {
+    margin-left: 20px;
+  }
+  .answer {
+    margin-top: 4
+    0px;
+  }
+  .g_nav {
+    margin: 0 auto;
+  }
+  .flex a {
+    color: white;
+  }
+  
+  .g_nav_toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    right: 5px;
+    margin: 16px;
+    padding: 3px 0;
+    width: 32px;
+    height: 20px;
+    z-index: 10;
+    cursor: pointer;
+  }
+  .g_nav_toggle .bar {
+    height: 2px;
+    background: #383838;
+    transition: all 0.2s ease-out 0s;
+  }
+  .nav_op .g_nav_toggle .bar {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .nav_op .g_nav_toggle .bar:first-child {
+    transform: translateY(-50%) rotate(45deg);
+  }
+  .nav_op .g_nav_toggle .bar:nth-child(2) {
+    transform: scale(0);
+  }
+  .nav_op .g_nav_toggle .bar:nth-child(3) {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  .g_nav_wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 20%;
+    width: 100%;
+    height: 100vh;
+    transform: translateY(-100%);
+    background: rgba(0, 0, 0, 0.8);
+    overflow: auto;
+    transition: all 0.2s ease-out 0s;
+    z-index: 2;
+  }
+  .nav_op .g_nav_wrap {
+    transform: none;
+  }
+  .g_nav {
+    font-size: inherit;
+    display: block;
+    position: static !important;
+    padding: 0 !important;
+    margin-top: 2rem;
+    background: transparent;
+  }
+  .g_nav li {
+    margin: 20px 0;
+    text-align: center;
+  }
+  .g_nav li a:after {
+    display: none;
+  }
+  .g_nav li a .name_wrap {
+    display: inline-block !important;
+  }
+  header li:last-child {
+    margin: 20px auto;
+    width: 5%;
+  }
+  #operation .wrapper .flex {
+    display: block;
+  } 
+  #operation .wrapper > h2 {
+    font-size: 0.85rem;
+    margin-bottom: 40px;
+  }
+  .operation {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .operation h2 {
+    margin-top: 0;
+  }
+  .operation p {
+    margin-bottom: 60px;
+    font-size: 0.85rem;
+  }
+  #contact {
+    padding: 25% 0;
+  }
+  #contact p:last-child {
+    font-size: 0.8rem;
+  }
+  footer {
+    padding: 10% 0;
+  }
+  footer img {
+    width: 25%;
+  }
+  footer p {
+    margin-top: 20px;
+    font-size: 0.7rem;
+  }
+}
+
+
+
+/*Vtuver.html*/
+#vtuber {
+  background: url(../img/vtuber.png) bottom / cover fixed;
+  padding: 6% 0 5% 0;
+  opacity: 0.95;
+  font-weight: bold;
+}
+.vtuber .flex {
+  text-align: center;
+  width: 90%;
+  padding: 3%;
+}
+.vtuber h1 {
+  margin-bottom: 10px;
+}
+.vtuber > h2 {
+  font-size: 1.6rem;
+  font-family: 'Noto Serif JP', serif;
+  margin-bottom: 100px;
+}
+.vtuber img {
+  width: 80%;
+  margin: 0 30px;
+}
+.vtuber h3 {
+  display: inline-block;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+}
