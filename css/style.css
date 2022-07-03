@@ -6,6 +6,11 @@ img {
   margin: 0;
   padding: 0;
 }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 body {
   font-size: 1.3rem;
   color: white;
@@ -21,8 +26,9 @@ h1, h2{
   font-family: 'Fredoka One', cursive;
 }
 h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   margin-bottom: 55px;
+  font-weight: normal;
 }
 h2 {
   font-size: 1.8rem;
@@ -49,6 +55,7 @@ body.nav_op {
 }
 main {
   overflow: hidden;
+  margin-top: 50px;
 }
 
 
@@ -83,15 +90,14 @@ header li:last-child {
 
 /*mainvisual*/
 .mainvisual {
-  background: black;
-  height: 1350px;
-  position: relative;
+  background: url(../img/main-b.png) bottom / cover fixed;
+  height: 130vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .mainvisual img {
-  position: absolute;
-  top: 570px;
-  left: 500px;
-  width: 50%;
+  width: 45%;
 }
 
 /*news*/
@@ -100,14 +106,17 @@ header li:last-child {
   opacity: 0.8;
   padding: 6% 0 10% 0;
 }
+.article {
+  margin: 30px 0 0 30px;
+}
 .article h2 {
   font-size: 1.8rem;
   letter-spacing: -1.5px;
-  margin: 30px 0 0 30px;
+  font-weight: normal;
 }
 .article p {
   font-weight: bold;
-  margin: -15px 0 0 70px;
+  margin: -15px 0 0 30px;
   background: rgb(31, 31, 31);
   border-radius: 10px;
   padding: 25px 0 15px 20px;
@@ -117,8 +126,8 @@ header li:last-child {
 /*mission value*/
 #missionvalue {
   background: url(../img/mission.png) bottom / cover fixed;
-  padding: 6% 0 10% 0;
   font-weight: bold;
+  padding: 6% 0 10% 0;
 }
 #missionvalue .wrapper h2,
 #entry h2 {
@@ -167,7 +176,7 @@ span {
   background-color: rgba(255, 255, 255,0.5);
   display: inline-block;
   position: absolute;
-  bottom: 0.2em;
+  bottom: 0;
 }
 .thema > p {
   margin-top: 30px;
@@ -195,7 +204,7 @@ span {
 .purple-border::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
   width: 100%;
   height: 8px;
@@ -225,20 +234,38 @@ span {
 .smoll {
   font-size: 1rem;
 }
+.schedule {
+  margin-top: 40px;
+}
+.step h2,
+.step p {
+  margin-left: 22.5px;
+  border-left: solid 2px rgb(158, 104, 158);
+  padding: 10px 0 0 40px;
+}
+.step .step-last {
+  border-left: none;
+  margin-left: 25px;
+}
 .step h3 {
   color: rgb(158, 104, 158);
   font-size: 2.5rem;
+  display: flex;
 }
 .step h3::before {
   content: "";
-  flex: 0 0 var(--circle-size);
-  height: var(--circle-size);
+  flex: 0 0 45px;
+  height: 45px;
   border-radius: 50%;
-  background-color: #702d8885;
+  background: rgb(158, 104, 158);
+  margin: 5px 20px 0 0;
+}
+.step h2 {
+  margin-top: 10px;
 }
 .step p {
   color: rgb(99, 99, 99);
-  margin: 10px 0;
+  padding-bottom: 40px;
 }
 
 .answer {
@@ -277,6 +304,7 @@ span {
   font-size: 1.4rem;
   font-family: 'Noto Serif JP', serif;
   display: inline-block;
+  letter-spacing: 0.5px;
 }
 .operation {
   width: 50%;
@@ -290,7 +318,9 @@ span {
   margin: 10px 0;
 }
 .operation p {
-  font-size: 0.9rem;
+  font-size: 0.82rem;
+  letter-spacing: 1.7px;
+  line-height: 1.4rem;
 }
 
 /*contact*/
@@ -299,6 +329,9 @@ span {
   padding: 6% 0 8% 0;
   font-weight: bold;
   text-align: center;
+}
+#contact p {
+  margin-top: 10px;
 }
 #contact p:last-child {
   font-size: 1rem;
@@ -327,6 +360,12 @@ footer p {
   .wrapper {
     padding: 5%;
   }
+  .mainvisual {
+    height: 40vh;
+  }
+  main {
+    margin-top: 37px;
+  }
   h1 {
     font-size: 2.3rem;
   }
@@ -335,6 +374,9 @@ footer p {
   }
   .logo {
     width: 25%;
+  }
+  .article {
+    margin: 0 0 30px 0;
   }
   .article h2 {
     font-size: 1rem;
@@ -345,6 +387,7 @@ footer p {
   }
   .article p {
     padding: 20px 10px 10px 10px;
+    margin: -5px 0 0 0;
   }
   #missionvalue .wrapper > h2 {
     font-size: 1.5rem;
@@ -359,8 +402,9 @@ footer p {
     font-size: 1.1rem;
   }
   .thema p {
-    margin-top: 10px;
-    font-size: 0.8rem;
+    margin-top: 15px;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
   }
   #entry .wrapper > h2 {
     margin-top: 40px;
@@ -375,13 +419,46 @@ footer p {
   .smoll {
     font-size: 0.7rem;
     margin-left: 10px;
+    font-weight: normal;
+  }
+  .schedule {
+    margin-top: 20px;
+  }
+  .step h3::before {
+    content: "";
+    flex: 0 0 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: rgb(158, 104, 158);
+    margin: 0 10px 0 0;
+  }
+  .step h2,
+  .step p {
+    margin-left: 15px;
+    padding-left: 25px;
+  }
+  .step h2 {
+    margin-top: 10px;
+  }
+  .step p {
+    font-size: 0.75rem;
+    padding: 10px 0 30px 25px;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+    line-height: 1.2rem;
+  }
+  .step .step-last {
+    margin-left: 16px;
   }
   .step h3 {
     font-size: 1.5rem;
   }
   .caution li {
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     margin-top: 2px;
+    font-weight: normal;
+    letter-spacing: 0.8px;
+    line-height: 1rem;
   }
   .caution li, .entry li {
     margin-left: 20px;
@@ -404,7 +481,7 @@ footer p {
     position: fixed;
     top: 0;
     right: 5px;
-    margin: 16px;
+    margin: 11px;
     padding: 3px 0;
     width: 32px;
     height: 20px;
@@ -482,12 +559,14 @@ footer p {
     width: 90%;
     margin: 0 auto;
   }
-  .operation h2 {
-    margin-top: 0;
+  #operation .wrapper .flex .operation h2 {
+    font-size: 1.2rem;
   }
   .operation p {
     margin-bottom: 60px;
-    font-size: 0.85rem;
+    font-size: 0.78rem;
+    font-weight: normal;
+    letter-spacing: 1.2px;
   }
   #contact {
     padding: 25% 0;
@@ -516,10 +595,8 @@ footer p {
   opacity: 0.95;
   font-weight: bold;
 }
-.vtuber .flex {
+.vtuber .wrapper {
   text-align: center;
-  width: 90%;
-  padding: 3%;
 }
 .vtuber h1 {
   margin-bottom: 10px;
@@ -527,15 +604,22 @@ footer p {
 .vtuber > h2 {
   font-size: 1.6rem;
   font-family: 'Noto Serif JP', serif;
-  margin-bottom: 100px;
+  margin-bottom: 60px;
 }
 .vtuber img {
-  width: 80%;
-  margin: 0 30px;
+  width: 70%;
 }
 .vtuber h3 {
   display: inline-block;
   color: white;
-  margin-bottom: 40px;
   font-size: 1.2rem;
 }
+.vtuber .wrapper ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.vtuber .wrapper ul li {
+  width: 50%;
+  margin-bottom: 40px;
+}
+
