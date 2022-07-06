@@ -604,7 +604,10 @@ footer p {
 .vtuber > h2 {
   font-size: 1.6rem;
   font-family: 'Noto Serif JP', serif;
-  margin-bottom: 60px;
+  margin-bottom: 70px;
+}
+.vtuber h3 {
+  margin-top: 10px;
 }
 .vtuber img {
   width: 70%;
@@ -619,7 +622,78 @@ footer p {
   flex-wrap: wrap;
 }
 .vtuber .wrapper ul li {
-  width: 50%;
-  margin-bottom: 40px;
+  width: 46%;
+  margin-bottom: 70px;
+}
+.left-li {
+  margin-right: auto;
 }
 
+@media screen and (max-width: 670px) {
+  .vtuber h1 {
+    margin: 30px 0 0 0;
+    font-size: 2.2rem;
+  }
+  .vtuber h2 {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+  .vtuber h3 {
+    font-size: 0.7rem;
+  }
+}
+
+/*profile*/
+.profile {
+  position: relative;
+  height: 400px;
+  padding-top: 20px;
+}
+.profile img {
+  width: 33%;
+  object-fit: contain;
+  top: 0;
+  left: 0;
+}
+.profile .flex div {
+position: absolute;
+top: 10;
+right: 0;
+width: 58%;
+text-align: center;
+}
+.profile h3 {
+  font-size: 1.8rem;
+  padding-bottom: 15px;
+}
+.profile .flex div .tw {
+  top: 80px;
+  left: 115px;
+  align-items: center;
+}
+.tw > a {
+  width: 35%;
+}
+.tw img {
+  margin-right: 0;
+}
+.profile p {
+  text-align: left;
+  font-size: 0.8rem;
+  padding-top: 20px;
+  margin-top: 70px;
+  border-top: 1px solid white;
+  line-height: 23px;
+  letter-spacing: 1px;
+}
+.vtuber > a p{
+  color: white;
+  text-align: center;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  margin: 50px 0 100px 0;
+}
+.vtuber > a p::after{
+  content: "⇦";
+}
