@@ -642,6 +642,9 @@ footer p {
   .vtuber h3 {
     font-size: 0.7rem;
   }
+  .vtuber .wrapper {
+    padding: 0;
+  }
 }
 
 /*profile*/
@@ -658,7 +661,7 @@ footer p {
 }
 .profile .flex div {
 position: absolute;
-top: 10;
+top: 10px;
 right: 0;
 width: 58%;
 text-align: center;
@@ -696,4 +699,33 @@ text-align: center;
 }
 .vtuber > a p::after{
   content: "⇦";
+}
+@media screen and (max-width: 670px) {
+  .profile {
+    height: 600px;
+    padding-top: 50px;
+  }
+  .profile div {
+    display: block;
+    overflow: hidden;
+    height: 500px;
+  }
+  .profile img {
+    width: 50%;
+  }
+  .profile .flex div {
+    top: 220px;
+    width: 100%;
+    text-align: left;
+  }
+  .profile h3 {
+    font-size: 1.4rem;
+  }
+  .profile .flex div .tw {
+    left: 0;
+  }
+  .tw img {
+    width: 7%;
+    margin-right: 15px;
+  }
 }
