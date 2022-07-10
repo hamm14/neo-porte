@@ -437,6 +437,9 @@ footer p {
   #missionvalue .wrapper h2, #entry h2 {
     font-size: 1.1rem;
   }
+  .thema > h2::before {
+    top: 20px;
+  }
   .thema p {
     margin-top: 15px;
     font-size: 0.7rem;
@@ -468,13 +471,17 @@ footer p {
     background: rgb(158, 104, 158);
     margin: 0 10px 0 0;
   }
+  .step::after {
+    left: 15px;
+    top: 35px;
+  }
   .step h2,
   .step p {
     margin-left: 15px;
     padding-left: 25px;
   }
   .step h2 {
-    margin-top: 10px;
+    margin-top: 0;
   }
   .step p {
     font-size: 0.75rem;
@@ -768,5 +775,13 @@ text-align: center;
   .tw img {
     width: 7%;
     margin-right: 15px;
+  }
+  .back-img {
+    width: 83%;
+    height: auto;
+    left: 63px;
+    top: 100px;
+    object-position: 0 0;
+    opacity: 0.2;
   }
 }
