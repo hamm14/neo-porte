@@ -55,7 +55,6 @@ body.nav_op {
 }
 main {
   overflow: hidden;
-  margin-top: 50px;
 }
 
 
@@ -67,16 +66,24 @@ header {
   left: 0;
   right: 0;
   z-index: 1;
+  line-height: 2;
+  height: 60px;
 }
 .flex a {
   color: black;
 }
 .logo {
-  width: 10%;
-  margin: 10px 0 0 10px;
+  width: 7%;
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  min-width: 160px;
 }
-nav {
-  margin: 15px 0 0 500px;
+header > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
 }
 header li {
   margin-right: 25px;
@@ -84,14 +91,17 @@ header li {
   font-weight: bold;
 }
 header li:last-child {
-  width: 2%;
-  margin: 0 20px 0 auto;
+  width: 1.5%;
+  position: absolute;
+  top: 15px;
+  right: 0;
+  min-width: 28px;
 }
 
 /*mainvisual*/
 .mainvisual {
   background: url(../img/main-b.png) bottom / cover fixed;
-  height: 130vh;
+  height: 150vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,6 +153,11 @@ header li:last-child {
   font-size: 2.7rem;
   margin-bottom: 80px;
 }
+#missionvalue .wrapper h2,
+#missionvalue .wrapper div {
+  line-height: 1.5;
+  letter-spacing: 3px;
+}
 .paragraph2 {
   margin: 60px 0 100px 0;
 }
@@ -176,7 +191,8 @@ span {
   background-color: rgba(255, 255, 255,0.5);
   display: inline-block;
   position: absolute;
-  bottom: 0;
+  top: 40px;
+  left: 0;
 }
 .thema > p {
   margin-top: 30px;
@@ -240,7 +256,6 @@ span {
 .step h2,
 .step p {
   margin-left: 22.5px;
-  border-left: solid 2px rgb(158, 104, 158);
   padding: 10px 0 0 40px;
 }
 .step .step-last {
@@ -259,6 +274,22 @@ span {
   border-radius: 50%;
   background: rgb(158, 104, 158);
   margin: 5px 20px 0 0;
+}
+.step {
+  position: relative;
+}
+.step::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  top: 60px;
+  left: 22.5px;
+  width: 2px;
+  background: rgb(158, 104, 158);
+  transform: translate(-50%);
+}
+.step:last-child::after {
+  content: none;
 }
 .step h2 {
   margin-top: 10px;
@@ -362,9 +393,7 @@ footer p {
   }
   .mainvisual {
     height: 40vh;
-  }
-  main {
-    margin-top: 37px;
+    padding-top: 10%;
   }
   h1 {
     font-size: 2.3rem;
@@ -373,7 +402,9 @@ footer p {
     margin: 0;
   }
   .logo {
-    width: 25%;
+    width: 20%;
+    min-width: 120px;
+    margin-top: 5px;
   }
   .article {
     margin: 0 0 30px 0;
@@ -480,9 +511,8 @@ footer p {
     justify-content: space-between;
     position: fixed;
     top: 0;
-    right: 5px;
-    margin: 11px;
-    padding: 3px 0;
+    right: 0;
+    margin: 20px 15px 11px 11px;
     width: 32px;
     height: 20px;
     z-index: 10;
@@ -547,6 +577,7 @@ footer p {
   header li:last-child {
     margin: 20px auto;
     width: 5%;
+    position: static;
   }
   #operation .wrapper .flex {
     display: block;
@@ -590,6 +621,7 @@ footer p {
 
 /*Vtuver.html*/
 #vtuber {
+  position: relative;
   background: url(../img/vtuber.png) bottom / cover fixed;
   padding: 6% 0 5% 0;
   opacity: 0.95;
@@ -655,9 +687,6 @@ footer p {
 }
 .profile img {
   width: 33%;
-  object-fit: contain;
-  top: 0;
-  left: 0;
 }
 .profile .flex div {
 position: absolute;
@@ -699,6 +728,13 @@ text-align: center;
 }
 .vtuber > a p::after{
   content: "⇦";
+}
+.back-img {
+  position: absolute;
+  top: 150px;
+  left: 300px;
+  width: 25%;
+  opacity: 0.3;
 }
 @media screen and (max-width: 670px) {
   .profile {
