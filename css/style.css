@@ -154,9 +154,12 @@ header li:last-child {
   margin-bottom: 80px;
 }
 #missionvalue .wrapper h2,
-#missionvalue .wrapper div {
+#missionvalue .wrapper div,
+#entry h2,
+#entry div,
+#entry p {
   line-height: 1.5;
-  letter-spacing: 3px;
+  letter-spacing: 0.8px;
 }
 .paragraph2 {
   margin: 60px 0 100px 0;
@@ -273,7 +276,7 @@ span {
   height: 45px;
   border-radius: 50%;
   background: rgb(158, 104, 158);
-  margin: 5px 20px 0 0;
+  margin: 10px 20px 0 0;
 }
 .step {
   position: relative;
