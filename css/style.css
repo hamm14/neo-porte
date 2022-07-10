@@ -155,9 +155,8 @@ header li:last-child {
 }
 #missionvalue .wrapper h2,
 #missionvalue .wrapper div,
-#entry h2,
-#entry div,
-#entry p {
+.entry ul,
+.step {
   line-height: 1.5;
   letter-spacing: 0.8px;
 }
@@ -238,6 +237,9 @@ span {
 }
 .entry > p {
   font-size: 1rem;
+}
+.caution {
+  margin-top: 30px;
 }
 .caution li {
   font-size: 1rem;
