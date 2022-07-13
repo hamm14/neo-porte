@@ -675,7 +675,7 @@ footer p {
 
 @media screen and (max-width: 670px) {
   .vtuber h1 {
-    margin: 30px 0 0 0;
+    margin: 50px 0 0 0;
     font-size: 2.2rem;
   }
   .vtuber h2 {
@@ -697,36 +697,33 @@ footer p {
   height: 400px;
   padding-top: 20px;
 }
-.profile img {
-  width: 33%;
-}
-.profile .flex div {
+.profile .text {
 position: absolute;
 top: 10px;
 right: 0;
-width: 58%;
+width: 57%;
 text-align: center;
 }
 .profile h3 {
   font-size: 1.8rem;
   padding-bottom: 15px;
 }
-.profile .flex div .tw {
-  top: 80px;
-  left: 115px;
+.tw {
+  margin-top: 15px;
+  justify-content: center;
   align-items: center;
 }
 .tw > a {
-  width: 35%;
+  width: 10%;
 }
 .tw img {
-  margin-right: 0;
+  width: 30%;
 }
 .profile p {
   text-align: left;
   font-size: 0.8rem;
   padding-top: 20px;
-  margin-top: 70px;
+  margin-top: 10px;
   border-top: 1px solid white;
   line-height: 23px;
   letter-spacing: 1px;
@@ -741,47 +738,57 @@ text-align: center;
 .vtuber > a p::after{
   content: "⇦";
 }
-.back-img {
-  position: absolute;
-  top: 150px;
-  left: 300px;
-  width: 25%;
-  opacity: 0.2;
-  z-index: -10;
-}
 @media screen and (max-width: 670px) {
   .profile {
     height: 600px;
     padding-top: 50px;
   }
-  .profile div {
-    display: block;
-    overflow: hidden;
-    height: 500px;
-  }
-  .profile img {
-    width: 50%;
-  }
-  .profile .flex div {
+  .profile .flex text {
     top: 220px;
     width: 100%;
     text-align: left;
   }
   .profile h3 {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
+    padding-bottom: 5px;
   }
-  .profile .flex div .tw {
+}
+.back-images {
+  position: relative;
+}
+.back-images img {
+  width: 40%;
+}
+.back-images .absolute {
+  position: absolute;
+  bottom: -50px;
+  right: 400px;
+  width: 80%;
+  z-index: -1;
+  opacity: 0.3;
+}
+@media screen and (max-width: 670px) {
+  #vtuber {
+    overflow: hidden;
+  }
+  .back-images .absolute {
+    right: -60px;
+    width: 100%;
+  }
+  .profile .text {
+    top: 230px;
     left: 0;
+    width: 100%;
+    text-align: left;
+  }
+  .back-images img {
+    width: 50%;
+  }
+  .tw {
+    justify-content: flex-start;
+    margin: 20px 0;
   }
   .tw img {
-    width: 7%;
-    margin-right: 15px;
-  }
-  .back-img {
-    width: 83%;
-    height: auto;
-    left: 63px;
-    top: 100px;
-    object-position: 0 0;
+    width: 60%;
   }
 }
