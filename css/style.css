@@ -714,7 +714,7 @@ text-align: center;
   align-items: center;
 }
 .tw > a {
-  width: 10%;
+  width: 20%;
 }
 .tw img {
   width: 30%;
@@ -790,5 +790,8 @@ text-align: center;
   }
   .tw img {
     width: 60%;
+  }
+  .tw > a {
+    width: 10%;
   }
 }
